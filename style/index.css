@@ -1,0 +1,50 @@
+body {
+    background-image: url('../img/splashback.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 700%;
+    line-height: 75%;
+    text-align: right;
+    
+    display: block; 
+    /* border: 1px solid red; */
+    margin-top: -10px;
+    /* margin-right: 100px; */
+}
+
+h1 a {
+    text-decoration: none;
+    color: chartreuse;
+    letter-spacing: -7%;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 1px;
+    transform-origin: top right;
+    transition: transform 0.1s ease-out, -webkit-text-stroke 0.1s ease-out, color 0.1s ease-out;
+}
+
+h1 a:hover{
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    transform: scale(80%);
+}
+
+#gif-style{
+     /* border: 1px solid red; */
+    height: 600px;
+    margin-top: -200px;
+    margin-left: 12%;
+    opacity: 40%;
+    transition: transform 0.1s ease-in-out;
+
+}
+
+#gif-style:hover{
+    opacity: 80%;
+    transform: scale(120%);
+}
