@@ -116,10 +116,14 @@ p{
 .pic-ctn {
   width: 100vw;
   height: 200px;
-  /* border: 1px solid red; */
   display: grid;
   place-items: center;
   margin-bottom: 270px;
+
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  margin-top: 15vh;
 }
 
 @keyframes display {
@@ -143,13 +147,6 @@ p{
     transform: translateX(-200px);
     opacity: 0;
   }
-}
-
-.pic-ctn {
-  position: relative;
-  width: 100vw;
-  height: 300px;
-  margin-top: 15vh;
 }
 
 .pic-ctn > img {
