@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>mayne page - lucien</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/parallax.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+<section class="parallax parallax__container perspective__container">
+  <div class="parallax__group">
+      <div class="parallax__layer parallax__layer--foreground">
+       <div class="head-style">
+            <h1>THe<br>FeeD</h1>
+            <a class="image-link" href="index.html">
+                <img class="head-gif" src="img/phoneGIF.gif" alt="i'm spinning!">
+             </a>
+        </div>
+        <div class="card-div">
+            <div class="card">
+                <h3>: wakey wakey :</h3>
+                <p>up and at'em! i have 9am classes five days a week so alarms are an essential part of my routine. if i don't wake up before 9am in general i feel like trash. my ideal day starts early.</p> 
+            </div>
+            <video src="img/alarm.MP4" class="content-style" controls autoplay loop muted></video>
+        </div> <!-- close card-div -->
+        
+        <div class="card-div">    
+            <div class="pic-ctn">
+                <img src="img/badhu.PNG" alt="" class="content-style">
+                <img src="img/foreverforever.PNG" alt="" class="content-style">
+                <img src="img/lucki.PNG" alt="" class="content-style">
+                <img src="img/star_again.PNG" alt="" class="content-style">
+                <img src="img/stone_roses.PNG" alt="" class="content-style">
+            </div>
+            <div class="card">
+                <h3>: tunes twenty-four seven:</h3>
+                <p>music is an essential part of life! without a nice tune, i have to be alone with my thoughts. my taste is varied and ever-changing. music curation and creating are major sources of joy in my life.</p>
+            </div>
+        </div> <!-- close card-div -->
+        
+        <div class="card-div">
+            <div class="card">
+                <h3>: camera :</h3>
+                <p>snap a pic! everyday passes faster than the one before, so its necessary to capture memories as they happen. </p>
+            </div>
+            <video src="img/camera.MP4" class="content-style" controls autoplay loop muted></video>
+        </div> <!-- close card-div -->
+        <div class="card-div">    
+            <video src="img/maps.MP4" class="content-style" controls autoplay loop muted></video>
+            <div class="card">
+                <h3>: maps :</h3>
+                <p>finding my way! maps help me navigate the world and discover new places. whether i'm exploring my city or traveling afar, having a reliable map is crucial for my adventures.</p>
+            </div>
+        </div> <!-- close card-div -->
+        <div class="card-div">
+            <div class="card">
+                <h3>: cheeky scroll :</h3>
+                <p>scrolling through social media is a guilty pleasure! i enjoy keeping up with friends, trends, and the latest happenings online. it's a fun way to pass the time and stay connected.</p>
+            </div>
+            <video src="img/instagram.mp4" class="content-style" controls autoplay loop muted></video>
+        </div> <!-- close card-div -->
+        <div class="card-div">
+            <video src="img/solitaire.mp4" class="content-style" controls autoplay loop muted></video>
+            <div class="card">
+                <h3>: cards :</h3>
+                <p>i like to tell myself that solitaire is a "smart game," but its honestly just as stim as the rest of the apps. </p>
+            </div>
+        </div> <!-- close card-div -->
+        <div class="card-div">
+            <div class="card">
+                <h3>: i hoped you wouldn't scroll this far :</h3>
+                <p>so many colors and animations! block blast helps me to melt my brain after a perfect day of nourishing my mind, body, and soul. why go straight to bed when you can simultaneously lose sleep and smoothen your brain xD</p>
+            </div>
+            <video src="img/blockblast.mp4" class="content-style" controls autoplay loop muted></video>
+        </div> <!-- close card-div -->
+  </div>
+  
+  <!-- parallax__layer--back is obsoleted by .parallax::after -->
+  </div>
+</section>
+<script>
+    const parallaxContainer = document.querySelector(".parallax__container");
+    const parallaxGroup = document.querySelector(".parallax__group");
+    const backgroundSpeed = 0.35;
+
+    function updateParallaxBackground() {
+        const viewportHeight = parallaxContainer.clientHeight;
+        const panoramaHeight =
+            (parallaxGroup.clientWidth * 1365) / 648;
+        const minimumGroupHeight = Math.max(
+            viewportHeight,
+            panoramaHeight,
+            viewportHeight +
+                (panoramaHeight - viewportHeight) / (1 - backgroundSpeed)
+        );
+
+        parallaxGroup.style.setProperty(
+            "--parallax-background-min-height",
+            `${minimumGroupHeight}px`
+        );
+
+        parallaxGroup.style.setProperty(
+            "--parallax-background-offset",
+            `${parallaxContainer.scrollTop * backgroundSpeed}px`
+        );
+    }
+
+    parallaxContainer.addEventListener("scroll", updateParallaxBackground, {
+        passive: true,
+    });
+    window.addEventListener("resize", updateParallaxBackground);
+    updateParallaxBackground();
+</script>
+</body>
+</html>
